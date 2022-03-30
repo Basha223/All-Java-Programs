@@ -1,44 +1,30 @@
-/* 3. Write a program to accept firstName, lastName and mobileNumber in string format. 
-   Print number of characters in firstName and lastName, and print sum of digits of a mobileNumber. 
-   Handle NumberFormatException while converting mobileNumber to long.
+/* 2. Write a program which will illustrate NumberFormatException. Create a test method, with in the test method accept two numbers 
+   using next() method of scanner class. Convert into numerical values and print addition of two numbers. 
+   Please write your comments regarding NumberFormatException such as "When NumberFormatException will occur in this program?"
 */
 import java.util.*;
-public class NumberFormatException 
-{
-    public static void main(String args[])
-    {
-        
-    int digit, sum = 0;  
-    
-    Scanner sc=new Scanner(System.in);
-    System.out.print("Enter first Name:");
-    String fname=sc.next();
-    System.out.print("Enter last Name:");
-    String lname=sc.next();
-    
-    System.out.print("Enter Mobile Number:");
-    String mobilenum=sc.next();
-    try{
-    long num=Long.parseLong(lname);
-}
-catch(Exception e){
-    System.out.println(e);
-}
-    
-    System.out.println("--------------------------");
-    System.out.println("length of firstNameis:"+fname.length());
-    System.out.println("length of lastNameis:"+lname.length());
-    System.out.println("Mobile number is:"+mobilenum);
-     //System.out.println("length of mobile number:"+num.length());
-    /*while(num>0)
-    {
-        digit = num%10;  
-        sum = sum + digit;  
-        num = num/10;  
-        
-    }  
-    System.out.println("Sum of Digits: "+sum);*/  
-    
-}
-}
+class NumberFormatException 
 
+{ 
+    void test()
+    {
+        Scanner sc=new Scanner(System.in);
+            int sum=0;
+            System.out.println("Enter first number:");
+            String num1=sc.next();
+            
+            System.out.println("Enter second number:");
+            String num2=sc.next();
+            
+            System.out.println("Addtion of two Numbers is:");
+             sum=num1+num2;
+            System.out.println((sum));
+    }
+    public static void main(String args[]) throws Exception
+    {
+        NumberFormatException obj=new NumberFormatException();
+        obj.test();
+    }
+    }
+//"When NumberFormatException will occur in this program?"
+//Answer:While adding String type numbers  to the integer type,then will seems NumberFormatException .

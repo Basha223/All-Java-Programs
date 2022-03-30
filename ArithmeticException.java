@@ -1,44 +1,19 @@
-/*Write a program to accept two numbers, one Arithmetic operator such as +, -, / , * and print output of Arithmetic operation.
-Write switch case to perform each operation. Handle ArithmeticException when you are performing division operation.*/
+/* 1. Write a program which will illustrate ArthmeticException. Create a parameterized method which can take two values and print division of two numbers. 
+Please write your comments regarding ArithmeticException such as "When ArithmeticException will occur in this program?"
+*/
 import java.util.*;
-class ArithmeticException{
-    //declare main method
-    public static void main(String[] args){
-        //inputs from user
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter first Number :");
-        int num1=sc.nextInt();
-        System.out.print("Enter Second Number:");
-        int num2=sc.nextInt();
-        //operatoins 
-        System.out.print("Enter an operator (+, -, *, /): \n");
-        char operator = sc.next().charAt(0);
-        int result;
-        //choose operation based user input
-        switch(operator){
-            case '+':
-                result=num1+num2;
-                System.out.print("Addition is:"+result);
-      
-          break;
-             case '-':
-                result=num1-num2;
-                System.out.print("Subtraction is:"+result);
-                break;
-             case '*':
-                result=num1*num2;
-                System.out.print("Multiplication is:"+result);
-                break;
-             case '/'://Handle ArithmeticException
-                 try{
-                result=num1/num2;
-                System.out.print("Devision is:"+result);
-                break;}
-                catch(Exception e){
-                    System.out.println(e);
-                }
-            default:
-            System.out.printf("Error! Operator is not correct");
-        }
+class ArithmeticException {
+
+    public static void main(String args[]) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter a value:");
+        int a=s.nextInt();
+        System.out.print("Enter b value:");
+        int b=s.nextInt();
+        int c=a/b;
+        System.out.println(c);
+
     }
 }
+//"When ArithmeticException will occur in this program?"
+//Answer is:when a number is divids by Zero,then the time ArithmaticException will Occur.
